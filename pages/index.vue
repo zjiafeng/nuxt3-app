@@ -1,8 +1,18 @@
 <template>
     <div>
         <h1>欢迎来到主页</h1>
-        <AppAlert>
-            这是一个自动导入的组件
-        </AppAlert>
+        <NuxtLink to="/about">About page</NuxtLink>
+        <n-pagination v-model:page="page" :page-count="100" show-quick-jumper>
+            <template #goto>
+                请回答
+            </template>
+        </n-pagination>
     </div>
 </template>
+
+<script lang="ts" setup>
+import { NPagination } from 'naive-ui'
+
+
+const page = ref(1)
+</script>
