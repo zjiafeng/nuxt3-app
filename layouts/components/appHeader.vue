@@ -17,7 +17,6 @@
                         <li class="nav-item h-f-100" v-for="item in menu" :key="item.key">
                             <nuxt-link v-if="item.object === 'category'" :to="{
                                 name: `${item.object}-id`,
-                                params: { id: 1 },
                                 state: { type: item.object_id, title: item.title }
                             }" :class="['first-link', item.children.length !== 0 && 'prohibit-event__none']">
                                 <x-icon :type="item.classes"></x-icon> {{ item.title }}
